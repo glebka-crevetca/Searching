@@ -288,7 +288,7 @@ arraySelect.addEventListener('change', () => {
     const index = parseInt(arraySelect.value);
     arrayInfo.textContent = `Массив #${index + 1} | Элементов: ${Object.keys(datasets[index]).length}`;
     searchInput.value = '';
-    resultsContainer.innerHTML = '<div class="no-results">Введите ключ для поиска</div>';
+    resultsContainer.innerHTML = '<div class="no-results">Введите слово для поиска</div>';
 });
 
 searchBtn.addEventListener('click', performSearch);
