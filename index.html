@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск слов для лабы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Поиск слов для лабы</h1>
+            <div class="subtitle">Привет. Это небольшой скрипт для поиска слов для вашей лабы. Сначала выбираете номер тройки, затем вводите слово. Но будьте осторожны с однокоренными словами. Их поиск реализовать сложно, поэтому эта функция работает не так хорошо, как хотелось бы. Удачи</div>
+        </header>
+        
+        <div class="controls">
+            <div class="select-container">
+                <label for="arraySelect">Выберите номер тройки:</label>
+                <select id="arraySelect"></select>
+            </div>
+            
+            <div class="search-container">
+                <div style="flex: 1;">
+                    <label for="searchInput">Слово для поиска:</label>
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="Введите слово..."
+                        autocomplete="off"
+                    >
+                </div>
+                <div style="display: flex; align-items: flex-end;">
+                    <button id="searchBtn">Найти</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="results-container" id="resultsContainer">
+            <div class="no-results">
+                <p>Выберите тройку и введите слово для поиска</p>
+                <p style="margin-top: 15px; font-size: 1rem; opacity: 0.8;">
+                    <span class="status-indicator status-normal"></span> Обычный результат
+                    <span class="status-indicator status-similar" style="margin-left: 20px;"></span> Однокоренное слово
+                    <span class="status-indicator status-new" style="margin-left: 20px;"></span> Новый элемент
+                </p>
+            </div>
+        </div>
+        
+        <div class="array-info" id="arrayInfo">
+            Тройка не выбрана
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
